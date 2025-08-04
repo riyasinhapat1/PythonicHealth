@@ -20,6 +20,22 @@
 
 ---
 
+## 📂 Project Structure
+
+hospital_portal/
+├── hospital_portal/ # Project settings
+├── users/ # Custom user app
+│ ├── models.py
+│ ├── views.py
+│ ├── forms.py
+│ └── templates/users/
+│ ├── register.html
+│ ├── login.html
+│ ├── patient_dashboard.html
+│ └── doctor_dashboard.html
+├── db.sqlite3 # SQLite DB
+└── manage.py
+
 
 ## Future Enhancements
 
