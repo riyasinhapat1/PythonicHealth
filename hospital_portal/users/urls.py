@@ -1,13 +1,12 @@
-from django.contrib import admin
 from django.urls import path
-from django.contrib.auth import views as auth_views
-from users import views as user_views
 from django.shortcuts import redirect
+from . import views
 
 urlpatterns = [
-    path('', lambda request: redirect('login')),  # 👈 root path redirect
-    path('admin/', admin.site.urls),
-    path('register/', user_views.register, name='register'),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
-    path('dashboard/', user_views.dashboard, name='dashboard'),
+    path('', lambda request: redirect('login')),  # Redirect base / to login
+    path('register/', views.register, name='register'),
+    path('login/', views.custom_login, name='login'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('dashboard/doctor/', views.doctor_dashboard, name='doctor_dashboard'),
+    path('dashboard/patient/', views.patient_dashboard, name='patient_dashboard'),
 ]

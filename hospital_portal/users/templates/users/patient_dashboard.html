@@ -19,6 +19,9 @@
     <div class="alert alert-info">
       <h4>Welcome, {{ request.user.first_name }}!</h4>
       <p>This is your patient dashboard.</p>
+      <p>Email: {{ user.email }}</p>
+      <p>User Type: {{ profile.user_type }}</p>
+
     </div>
   </div>
 
