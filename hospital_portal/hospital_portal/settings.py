@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vu6=@m789ezx&_*q(+$nj3-6msq4n*+n*y_4hvcgdw!)_d*3yp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['PythonicHealth.onrender.com', 'localhost', '127.0.0.1']
 LOGIN_REDIRECT_URL = '/dashboard/'
 
 
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
